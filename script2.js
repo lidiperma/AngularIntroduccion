@@ -1,22 +1,24 @@
 var app=angular.module("app",[]);
  
 function SeguroController($scope) {
-  $scope.seguro={
+    
+    //Objeto Notacion JSON
+  $scope.seguro = {
     nif:"",
-    nombre:"",
+    nombre:"Marta",
     ape1:"",
-    edad:undefined,
+    edad:33,
     sexo:"",
     casado:false,
-    numHijos:undefined,
+    numHijos:0,
     embarazada:false,
-    
+    //es un objeto dentro del objeto seguro
     coberturas: {
       oftalmologia:false,
       dental:false,
       fecundacionInVitro:false
     },
-    
+    //es un objeto dentro del objeto seguro
     enfermedades:{
       corazon:false,
       estomacal:false,

@@ -2,9 +2,10 @@
 <html ng-app="app">
   <head>
       <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js">
-          
+         
       </script>
-    <script src="script.js"></script>
+       <meta charset="UTF-8">
+    <script src="script2.js"></script>
   </head>
   <body ng-controller="SeguroController">
     <form>
@@ -28,8 +29,10 @@
       </fieldset>      
       <fieldset>
       <legend>Enfermedades</legend>
-          <label for="corazon">Corazon:</label><input id="corazon" name="corazon" type="checkbox" ng-model="seguro.enfermedades.corazon" /><br>
-          <label for="estomacal">Estomacal:</label><input id="estomacal" name="estomacal" type="checkbox" ng-model="seguro.enfermedades.estomacal" /><br>
+          <label for="corazon">Corazon:</label>
+          <input id="corazon" name="corazon" type="checkbox" ng-model="seguro.enfermedades.corazon" /><br>
+          <label for="estomacal">Estomacal:</label>
+          <input id="estomacal" name="estomacal" type="checkbox" ng-model="seguro.enfermedades.estomacal" /><br>
           <label for="rinyones">Ri&ntilde;ones:</label><input id="rinyones" name="rinyones" type="checkbox" ng-model="seguro.enfermedades.rinyones" /><br>
           <label for="alergia">Alergia:</label><input id="alergia" name="alergia" type="checkbox" ng-model="seguro.enfermedades.alergia" /><br>
           <label for="nombreAlergia">Nombre de la alergia:</label><input id="nombreAlergia" name="nombreAlergia" type="text" ng-model="seguro.enfermedades.nombreAlergia" /><br>
