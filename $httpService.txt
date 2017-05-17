@@ -1,0 +1,35 @@
+
+El objeto Config
+$http acepta como parámetro un único objeto llamado config con todas las 
+propiedades que necesita para la petición. 
+Veamos ahora alguna de las propiedades: 
+*method: El método HTTP para hacer la petición. 
+Sus posibles valores son: 
+GET, 
+POST, 
+PUT, 
+DELETE, etc.
+*url: 
+La URL de donde queremos obtener los datos.
+*data: 
+Si usamos el método POST o PUT aquí pondremos los datos a mandar en 
+el body de la petición HTTP
+*params: 
+Un objeto que se pondrá como parámetros de la URL.
+
+-----------------------------------------------------------------------------
+
+Los datos obtenidos. 
+Si todo ha funcionado correctamente podremos obtener el objeto JavaScript 
+correspondiente al String JSON que nos han pasado. 
+Para ello llamaremos a la función success(fn) que acepta como único parámetro
+una función nuestra que será llamada cuando se obtengan los datos. 
+
+La función que le pasaremos tendrá 4 argumentos que son los siguientes: 
+data: Un objeto JavaScript correspondiente a los datos JSON que ha recibido
+status: Es el estado HTTP que ha retornado. 
+Su valor siempre será entre 200 y 299 ya que si se llama a esta función significa 
+que la petición ha tenido éxito.
+headers:Es una función que acepta como único parámetro el nombre de una cabecera 
+HTTP y nos responde su valor.
+config: El mismo objeto config que usamos para configurar la petición

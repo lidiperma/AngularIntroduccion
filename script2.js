@@ -28,6 +28,25 @@ function SeguroController($scope) {
     },
     fechaCreacion:new Date()
   };
-}
+  
+  $scope.disabledNombreAlergia=function() {
+  return ($scope.seguro.enfermedades.alergia===false);
+  };
+  /*También funciones con parametros*/
+  
+  $scope.suma=function(a,b) {
+   return a+b;
+   };
+ //Funcion que recibe otra función
+   $scope.isNegativo=function(c) {
+  if (c<0) {
+    return true;
+  } else {
+    return false;
+  }
+  };
 
+};
+/*<input ng-disabled="disabledNombreAlergia()" id="nombreAlergia"*/
 
+/*<input ng-disabled="isNegativo(suma(seguro.edad,10))" id="nombreAlergia" name="*/
