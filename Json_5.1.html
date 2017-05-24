@@ -19,17 +19,19 @@
                 document.getElementById("demo").innerHTML = myObj.name;
                 document.getElementById("demo2").innerHTML=myObj.age;
                     
-                    var myObj, i, x = "";
+                    var myObj, i, j, x = "";
                     //Se entra la array del objeto
+                    for (j in myObj){
+                       document.getElementById("demo").innerHTML = myObj.name;
+                       document.getElementById("demo2").innerHTML=myObj.age; 
+                    }
+                    
                     for (i in myObj.pets) {
                         //pet[i] devuelve el valor de la propiedad
                         x += "<h2>" + myObj.pets[i].animal + "</h2>";
                         x += myObj.pets[i].name;
-
                     }
                     document.getElementById("demo3").innerHTML = x;
-
-
                 }
             };
             xmlhttp.open("GET", "json_demo.txt", true);
