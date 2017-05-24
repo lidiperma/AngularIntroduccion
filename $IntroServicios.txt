@@ -1,8 +1,8 @@
 
-¿Qué es un servicio?
+¿Qué es un servicio?: Una unidad independiente y funcional de código
 Es un objeto JavaScript que nos permite obtener información. 
 Aparentemente nada nuevo que entender, sería por ejemplo un DAO en Java o un servicios de Java. 
-Lo importante de ésto es que un servicio nunca  interacciona con la propia página, 
+Lo importante de ésto es que un servicio nunca interacciona con la propia página, 
 sólo con otros servicios o con un servidor de datos que pueda estar en otro Host. 
 
 Una característica importante de los servicios es que sólo hay una única instancia 
