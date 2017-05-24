@@ -23,8 +23,10 @@ app.constant("area", function (radio) {
     return 3.1416 * radio * radio;
 });
 
+//
 app.controller("PruebaController", ["$scope", "idioma", "matematicas_simples", "radio", "area", function ($scope, idioma, matematicas_simples, radio, area) {
         $scope.idioma = idioma;
+        //valores que ponemos en el $scope y que llamamos desde la vista
         $scope.suma = matematicas_simples.sumar(3, 6);
         $scope.area = area(radio);
     }]);
