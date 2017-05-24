@@ -1,16 +1,36 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<html ng-app="ejercicio">
+  <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+      <meta charset="UTF-8">
+      <script src="script3.js" type="text/javascript"></script>
+    
+  </head>
+  <body ng-controller="controladorPrincipal">
+    <form>
+      <fieldset>
+        <legend>Datos de Alta</legend>
+         
+          <label for="nombre">Nombre:</label><input id="nombre" name="nombre" type="text" ng-model="datos.nombre" /><br>
+          <label for="ape1">1º Apellido:</label><input id="ape1" name="ape1" type="text" ng-model="datos.apellido" /><br>
+          <label for="edad">Edad:</label><input id="edad" name="edad" type="text" ng-model="datos.edad" /><br>
+          <!-- <label for="sexo">Sexo:</label><select id="sexo" name="sexo" type="checkbox" ng-model="" >
+              <option value="">--Elige opcion--</option><option value="H">Hombre</option><option value="M">Mujer</option></select><br>-->
+       
+        
+        <legend>Educacion</legend>
+          <label for="primaria">Educacion Primaria:</label>
+          <input id="primaria" name="primaria" type="checkbox" ng-model="datos.educacion.primaria"/><br>
+          <label for="secundaria">Educacion Secundaria:</label>
+          <input id="secundaria" name="secundaria" type="checkbox" ng-model="datos.educacion.secundaria" /><br>
+          <label for="universitaria">Educacion Universitaria:</label>
+          <input id="universitaria" name="universitaria" type="checkbox" ng-model="datos.educacion.universitaria" /><br>
+    </fieldset>
+        <button ng-click="cargarDatos()"> Cargar Datos </button>
+    </form>
+      <h3> Nombre: {{datos.nombre}} </h3>
+      <h3> Apellido: {{datos.apellido}} </h3>
+      <h3> Edad: {{datos.edad}}</h3>
+  </body>
 </html>
+

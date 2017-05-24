@@ -1,6 +1,8 @@
 var app=angular.module("app",[]);
-   
+//Esto segun Angular es inyeccion
+//Inyeccion de dependencia   
 app.controller("SeguroController",['$scope','$log',function($scope,$log) {
+        $log.debug("Acabamos de crear el controloador");
   $scope.seguro={
     nif:"",
     nombre:"",
@@ -24,8 +26,8 @@ app.controller("SeguroController",['$scope','$log',function($scope,$log) {
     },
     fechaCreacion:new Date()
   };
-   
+  $log.error("Error"); 
   $log.debug("Acabamos de crear el $scope");
-   
+  $log.warn("Warning");
 }]);
 

@@ -12,9 +12,10 @@ function SeguroController($scope) {
     casado:false,
     numHijos:0,
     embarazada:false,
+    miopia:true, 
     //es un objeto dentro del objeto seguro
     coberturas: {
-      oftalmologia:false,
+      oftalmologia:true,
       dental:false,
       fecundacionInVitro:false
     },
@@ -29,10 +30,20 @@ function SeguroController($scope) {
     fechaCreacion:new Date()
   };
   
+  
+  
   $scope.disabledNombreAlergia=function() {
-  return ($scope.seguro.enfermedades.alergia===false);
+      //si es true la directiva ngDisabled ocultara el campo
+  return ($scope.seguro.enfermedades.alergia===true);
   };
   /*También funciones con parametros*/
+  $scope.disableOftalmologia=function(){
+      if ($scope.seguro.miopia===false){
+            $scope.seguro.coberturas.oftalmologia=false;  
+            return($scope.seguro.coberturas.oftalmologia===false);
+  
+  }
+  };
   
   $scope.suma=function(a,b) {
    return a+b;

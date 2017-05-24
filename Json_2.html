@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>Store and retreive data from local storage.</h2>
+
+        <p id="demo"></p>
+
+        <script>
+            var myObj, myJSON, text, obj;
+
+            //Storing data:
+            //Objeto JSON
+            myObj = {"name": "John", "age": 31, "city": "New York"};
+            //Pasamos a txt el objeto JSON
+            myJSON = JSON.stringify(myObj);
+            //Almacenar en un objeto "localStoraje" con setItem. Sistema clave:valor 
+            localStorage.setItem("testJSON", myJSON);
+
+            //Retrieving data:
+            text = localStorage.getItem("testJSON");
+            //El objeto en la variable txt es un JSON
+            //hacemos de JSON a JavaScript
+            obj = JSON.parse(text);
+            document.getElementById("demo").innerHTML = obj.name;
+        </script>
+
+    </body>
+</html>

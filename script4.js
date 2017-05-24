@@ -1,6 +1,7 @@
 var app=angular.module("app",[]);
   //El controlador ahora es la funcion controller de Angular
 //que se añade al módulo y no una función como en ejemplos anteriores
+
 app.controller("SeguroController",function($scope) {
   $scope.seguro={
     nif:"",

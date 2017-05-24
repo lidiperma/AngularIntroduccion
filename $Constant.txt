@@ -1,0 +1,8 @@
+ constant
+
+Una constant es un servicio al que le pasamos directamente el valor de dicho 
+servicio. Su principal característica es que se puede inyectar en cualquier sitio. 
+Se define llamando al método constant de un módulo.
+A dicho método le pasaremos el nombre de la constante y su valor.
+
+ 

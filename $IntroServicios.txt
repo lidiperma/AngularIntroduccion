@@ -1,0 +1,16 @@
+
+¿Qué es un servicio?
+Es un objeto JavaScript que nos permite obtener información. 
+Aparentemente nada nuevo que entender, sería por ejemplo un DAO en Java o un servicios de Java. 
+Lo importante de ésto es que un servicio nunca  interacciona con la propia página, 
+sólo con otros servicios o con un servidor de datos que pueda estar en otro Host. 
+
+Una característica importante de los servicios es que sólo hay una única instancia 
+de ellos aunque los usemos más de una vez,es decir que son un singleton. 
+
+Tipos: 
+Constantes
+Valores
+Servicios
+Factorias
+Proveedores
